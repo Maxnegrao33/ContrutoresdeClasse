@@ -1,0 +1,85 @@
+//Criando a classe retângulo
+	public class retangulo {
+
+		private double largura;
+		private double altura;
+
+	public double calcularArea() {
+		return largura * altura;
+	}
+}
+
+	//Criando a classe Aplicação
+	public class Aplicacao {
+
+		public static void main(String[] args) {
+
+			Retangulo r1 = new Retangulo();
+			double area1 = r1.calcularArea();
+
+			System.out.println(area1);
+//No Java, os atributos sempre são iniciados com algum valor, o padrão é 0
+	}
+}
+
+//Definindo um construtor
+	public class retangulo {
+
+		private double largura;
+		private double altura;
+	
+	//Chamando o Construtor
+	public retangulo() {
+		largura = 4;
+		altura = 3;
+	} 
+
+	public double calcularArea() {
+		return largura * altura;
+	}
+}
+Importante: Toda classe tem um construtor, se não for criado, o Java cria uma automaticamente, mas sem parâmetros, chamado de construtor padrão.
+
+//Pode também ser feito de outra forma, usando a sobrecarga de construtores.
+
+
+public class retangulo {
+
+		private double largura;
+		private double altura;
+
+	//Pode mudar o recebimento dos parâmetros usando a sintaxe this()
+
+	public retangulo() {
+		this(4, 3);
+
+		//largura = 4;
+		//altura = 3;
+	} 
+
+	public retangulo (double largura, double altura) {
+		this.largura = largura;
+		this.altura = altura;
+	}
+
+	public double calcularArea() {
+		return largura * altura;
+	}
+}
+
+//Para acessar o construtor dos parâmetros, criar novo objeto r2
+
+public class Aplicacao {
+
+		public static void main(String[] args) {
+
+			Retangulo r1 = new Retangulo();
+			double area1 = r1.calcularArea();
+
+			System.out.println(area1);
+	
+	//Cria novo objeto já passando valores de parâmetros
+			Retangulo r2 = new Retangulo(5, 7);
+			double area2 = r2.calcularArea();
+	}
+}
